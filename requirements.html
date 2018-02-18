@@ -3,22 +3,22 @@
 	<head>
 		<title> CS 499 Group 7: Supreme Court </title>
 		<meta charset="UTF-8">
-		
+
 		<!-- Put JS headers here -->
-		
-		
+
+
 		<!-- CSS Stylesheets -->
 		<link rel="stylesheet" href="main.css" type="text/css">
-		
-		
-		
+
+
+
 	</head>
-	
+
 	<body>
 		<div id="requirements-page" class="container">
 			<div id="requirements-page-header" class="header">
 				<h1> Requirements </h1>
-				
+
 			</div>
 			<br><br><br>
 			<div class="content">
@@ -39,39 +39,50 @@
 					<ol>
 					<li>Develop a web application that allows a user to search Supreme Court documents by applying keywords, dates, and sources:
 					<ul>
-					<li> Create a database of articles related to the United States Supreme Court. This database will include information like associated links, texts, images, and other characteristics of articles such as the article's souce, author, etc.
-					<li> Allow for routine updating of the database of searchable articles, pulling from a variety of sources that includes popular news outlets and specific reporters that are known to cover the Supreme Court
-					<li>Provide a set of tools and filters that allow a user to easily search database
-					<li>Output a csv file that contains associated attributes of articles searched for by users
-					<li>Refine article identification to ensure that a large proportion of articles associated with the supreme court are captured and indexed
+					<li> Create a database of articles related to the United States Supreme Court. This database will include information like associated links, texts, images, and other characteristics of articles such as the article's souce, author, etc. (8 hours)
+					<li> Allow for routine updating of the database of searchable articles, pulling from a variety of sources that includes popular news outlets and specific reporters that are known to cover the Supreme Court (40 hours/300 lines of code)
+					<li>Provide a set of tools and filters that allow a user to easily search database (50 hours or 300 lines of code)
+					<li>Output a csv file that contains associated attributes of articles searched for by users (5 hours/100 lines of code)
+					<li>Refine article identification to ensure that a large proportion of articles associated with the supreme court are captured and indexed (20 hours)
 					</ul>
 					<li>Combine best aspects of previous projects, which include:
 					<ul>
-					<li> The three-layered architecture from the web application; the visual, data, and external layers. In the visual layer is the UI and displays results from user queries, such as the text and images from the articles. The data layer holds all the information contained in the database. The external layer contains the protocol which scrapes the internet for articles to add to the database. It achieved this using the Faroo Search API.
+					<li> The three-layered architecture from the web application; the visual, data, and external layers. In the visual layer is the UI and displays results from user queries, such as the text and images from the articles. The data layer holds all the information contained in the database. The external layer contains the protocol which scrapes the internet for articles to add to the database. It achieved this using the Faroo Search API. (20 hours)
 					</ul>
 					</ol>
 					<b>Ultimate set of goals (End of semester)</b>
 					<ol start="3">
 					<li> Add article analysis tools
 					<ul>
-					<li> Integrate text analysis tools, like readability
-					<li> Integrate image analysis tools that will be able to classify if certain objects associated with the Supreme Court, like the Supreme Court Building and Lady Justice, are included in picture in articles
+					<li> Integrate text analysis tools, like readability (10 hours)
+					<li> Integrate image analysis tools that will be able to classify if certain objects associated with the Supreme Court, like the Supreme Court Building and Lady Justice, are included in picture in articles (10 hours)
 					</ul>
 					</ol>
-					
+
 					<br><br><hr><br><br>
-					
-					<center><h1>Tools Needed</h1></center>
+
+					<center><h1>Tools Needed/Platforms used</h1></center>
 					<br><br>
 					<ul>
-					<li>Python
-					<li>Linode
+					<li>Python 3.6
+					<li>Linode (Debian 9.3)
+					<li> Maria DB 10.2
+					<li> MYSQL
+					<li> PHP 7.2.2
+					<li> Newspaper 3K
+					<li> Azure Image recognition API
 					<li>Etc
 					</ul>
-					
+					<h2>Compatability</h2>
+					<ul>
+					<li>Compatible on OSX/Windows. Web application
+					<li>Chrome 60.0.3112.78
+					<li> Safari 11.0
+					</ul>
+
 					<br><br><br>
 				</div>
-			
+
 			</div>
 		</div>
 	</body>
