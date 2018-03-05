@@ -34,7 +34,18 @@
 					<br><br>
 				</div>
 				<div class="text">
-					<h3>Overview</h3>
+					<h2>Overview</h2>
+					<p>The requirements for our project are as follows:</p>
+					<ul>
+						<li>Develop a web application written in html javascript that'll have search functionality via keywords. It only goes through articles we've determined are relevant to the Supreme Court.</li>
+						<li>Each article entry inside the database will have columns of data associated with different attributes such as: original link and source information; links to images; text analysis attributes including word count, readability score, sentiment score.</li>
+						<li>The above mentioned attributes will be exportable. This will be achieved by implementing a function to output a .csv file with those attributes.</li>
+						<li>We will also implement a way to routinely fetch news articles from various news sources. The fetching is done through RSS feeds and NEWSAPI. We've acquired a free API key from NEWSAPI and we intend to implement it's function of searching for news articles that mention a specific topic or keyword. The API has a distinct endpoint which will be especially helpful for us; it is the Everything endpoint, a url (https://newsapi.org/v2/everything) that indexes articles from over 5,000 sources from the past 3 months that have and haven't made breaking news.</li>
+						<li>The UI of the application is part of one of the three layers present in the web application. In the visual layer, the UI will present a searchbar with options to set start and end dates for the query. This is similar to the SCOOP project. Once articles are retrieved and presented to the user, there will be a representation with the attributes of the article, mentioned in the second bullet point of this list.</li>
+						<li>The other two layers have been introduced already; the data layer corresponds to the database, and the external layer contains the article fetching methods.</li>
+						<li>One of our ultimate goals will be to contrive a method to analyze images of articles to identify association with the Supreme Court, using relevant articles' images as a learning tool for future articles tested. This action occurs when determining whether or not to add an article into the database; essentially, we're adding a feature to the learning algorithm, where instead of just using text, images are included.</li>
+					</ul>
+					<h2>Environment</h2>
 
 				</div>
 
