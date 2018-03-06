@@ -47,7 +47,48 @@
 					</ul>
 					<h2>Environment</h2>
 					<p></p>
-					
+
+					<h2>Modules</h2>
+					<ol><li>There are four major portions to the project that could be considered modules:
+						<ul><li>Article Collector
+										<ul>
+											<li>Sends Requests for information NEWSAPI
+											<li>Sends GET Requests to News websites to get articles
+											<li>Sends requests to RSS feeds for latest feeds
+											<li>Uses Newpaper 3k library to extract text, images, and metadata from articles
+											<li>Sends article text to classifier to determine relevancy
+										</ul>
+								<li>Article Classifier
+										<ul>
+											<li>Receives text of given article
+											<li>Using trained model, classifies articles as relevant or not (Simple Boolean decision)
+										</ul>
+								<li>Database and associated clients that read/write to it
+									<ul>
+											<li>Database set up with ER diagram below
+											<li>Also includes client which allows regularly running script to save articles and metadata to database
+											<li>Client also saves images
+									</ul>
+								<li>User Interface
+									<ul><li>Queries the database to display relevant results
+											<li>Allows user to set date constraints on searches
+											<li>Allows user to see associated images
+											<li>Allows user to download list of results as csv
+									</ul>
+						</ul>
+					</ol>
+						<p>These are the four high level components of the project. To give a brief summary, the Article Collector is responsible for collecting articles. The classifier determines if these are worthy of being saved into the database.
+							 The database and associated client allows for articles deemed relevant to be saved to the database and organized in a orderly fashion. This client will also save article images in a directory on the server for easy retrieval. The user interface is then responsible for querying the database and displaying information to users in a presentable format.</p>
+						<h3>Collector/Classifier Script Overview</h3>
+						<img src="callResponseDiagram.jpg">
+						<p>The above diagram helps to describe the script that handles the collection, classification, and saving of articles. This script will run on a regular basis, and will have multiple sources of articles. First, the script requests articles from various sources, like NEWSAPI, RSS feeds, and Sections of news websites dedicated to the supreme court.
+							For the first two, no additional work is necessary to get links, texts, and images associated with articles. For the last source, the sections of websites, the script will search for certain html tags in the page that correspond to the article links being shown. Once this is accomplished, the text of the articles is then downloaded, and the text of articles will be sent to the classifier filter out irrelevant results. Once this filtering is done, the list of remaining articles will be saved to the database through a database client that will have functions for easily saving article data and associated metadata, like source, author, date, and date posted. This is a good overview of how the collection process will work.</p>
+							<br>
+						<h3>Database Overview</h3>
+						<img src="erDiagram.jpg">
+						<p>Above is an ER diagram of the database for article collection. The database is relatively simple, just saving articles and information about associated images. If time permits, this can easily be extended to support saving image and text analysis. Analysis tables can simply be added to reference the article id and image id for text and image analysis, respectively.</p>
+						<h3>User Interface</h3>
+						<p>A large portion of the user interface will be adapted from the previous group's user interface, so the design for this involves ensuring that we make our database compatible with the current user interface of the previous project.</p>
 					<h2>Screenshots</h2>
 					<p>These shots are of the current python project, which is an effective template for what we are trying to do as well:</p>
 					<img src="Capture1.PNG" alt="Top of search page" width=100%>
@@ -59,7 +100,7 @@
 					<img src="Capture3.PNG" alt="Result page" width=100%>
 					<p>The article result page</p>
 					<br>
-					
+
 					<h2>Use Cases</h2>
 					<ol type=A>
 						<li><b>Browsing available articles</b>
