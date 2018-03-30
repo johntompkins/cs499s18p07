@@ -38,7 +38,22 @@
 				</div>
 				<div class="text">
 					<h3>1. Unit Testing</h3>
-          <p></p>
+		<ul>
+		<li>Article Collector
+			<ul>
+			<li>Dedicated websites scrapers. Each scraper function will return articles from the link given in the function of the specific website. When run, this will return a list of urls of the supreme court articles </li>
+			<li>NEWS API function - This function returns a list of urls of articles that are relevant to the query "Supreme Court" from the NEWS API service. </li>
+			<li>RSS feeds - Given RSS feeds will be parsed for articles. </li>
+			<li>Relevancy - The articles from the RSS feeds and NEWS API will be tested for relevancy</li>
+			<li>Article Parsing - Given the urls from the various sources, this parsing ensures that the article title, images, text, source, and authors are lifted from the url. For each article, the collector should be able to lift this information.</li>
+
+			<li>Article Duplication Test - Given an article, check the database to determine if it is a duplicate.</li>
+			<li>Text analysis - Given an article text, send a request to Google Natural Language Service to determine keywords.</li>
+			<li>Image analysis - Given an image, send a request to Google Cloud Image analysis to determine entities in said image.</li>
+
+			</ul>
+		</li>
+		</ul>
           <h3>2. Integration Testing</h3>
           <p></p>
           <h3>3. System Testing</h3>
