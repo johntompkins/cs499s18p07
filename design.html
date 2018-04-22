@@ -56,7 +56,7 @@
 					<h2>Environment</h2>
 					<p>Our cutomers expressed to us that our web application needs to be compatible in both Windows and on macOS. Our web application will be written in html javascript [version 1.8.2] with some PHP [version 7.2], which is certainly compatible in both operating systems; it'll be the webpage which the users will access. It's more a question of browser compatibility, but our cutomers didn't mention any browser requirements.</p>
 					<p>The NEWSAPI [version 0.1.1] functions will be implemented in Python [version 3], and it is simply a choice of preference because it's a language we're all comfortable writing in. However, the main reason we are using Python is becaues of a library called Newspaper3k [version 0.2.6], which includes functions to extract plaintext and metadata from news articles. This is how we will fill the attributes inside the database.</p>
-					<p>The database will be produced in MariaDB [version 10.3.5], a community-developed fork of the MySQL relational database management system. It is compatible with MySQL in virtually every way, maintining the same APIs and commands as MySQL. It is also compatible with Windows and macOS.</p>
+					<p>The database will be produced in the MySQL relational database management system. It is also compatible with Windows and macOS.</p>
 
 					<h2>Modules</h2>
 					<ol><li>There are four major portions to the project that could be considered modules:
@@ -71,7 +71,7 @@
 								<li>Article Classifier
 										<ul>
 											<li>Receives text of given article
-											<li>Using trained model, classifies articles as relevant or not (Simple Boolean decision)
+											<li>Classifies articles as relevant or not (Simple Boolean decision)
 										</ul>
 								<li>Database and associated clients that read/write to it
 									<ul>
