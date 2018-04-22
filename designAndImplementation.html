@@ -45,7 +45,23 @@
 					<a href="conclusions.html">Conclusions</a>
 					<br><br>
 				</div>
+				<div class="text">
+					<h2>Implementation/Design Considerations</h2>
+					<ul>
+						<li>One of the first design considerations came whenever we were confronted with what previous project to use as a basis for developing our project.
+							 The SCOOP project had a more appealing user interface, while the other project had a better collection system. We went with the latter of the projects because of the database schema and the python script for collecting articles. It was very easy to modify the script to allow for more articles to be included in the collection process.</li>
+						<li>We also were planning to include a machine learning based classifier to determine if incoming articles were relevant or not. However, because of our group's lack of experience with natural language processing, we opted for a more rudimentary approach to determine relevancy. We also lost a group member who was the main person pitching this classifier.</li>
+						<li>The amount of images collected from an article was also limited to one. This is to reduce the potential costs of the image analysis software used and to save space, as all images are saved on the instance currently.</li>
+						<li>An article is not saved if the total character length of the article is less than 500 characters. These articles are usually not large enough to extract any meaning.</li>
+					</ul>
+					<h2>Limitations/Restrictions</h2>
+					<ul>
+						<li>NEWSAPI free tier can only be called 1000 times a day. This should never be reached with the frequency with which we are calling the API, but it is important to note. Similarly, Google Vision has a limit of 1000 units a month before they charge, and Google Language a limit of 5000 a month. </li>
+						<li>Inherently, storing images and text of articles will require a good amount of memory. Ample memory should be available on wherever this application is running.</li>
+					</ul>
 
+				</div>
+			</div>
 	</body>
 
 </html>
