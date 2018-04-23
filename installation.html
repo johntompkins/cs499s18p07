@@ -46,8 +46,55 @@
 					<br><br>
 					<a href="installation.html">Installation</a>
 					<br><br>
+					<a href="references.html"> References></a>
+					<br><br>
 				</div>
+				<div class="text">
+					<h2>"Cold" Installation</h2>
+					<ol>
+						<li>Prerequisites: Have a server running Linux Apache PHP MySQL stack. Python 3 is required as well. Also need a Google Cloud Account with Cloud vision and Cloud Language enabled.</li>
+						<li>In Google Cloud, Create a project, enable the Vision and Language API for said product, and obtain a service account key following this guide: <a href="https://cloud.google.com/storage/docs/authentication#generating-a-private-key">Google Credentials</a>.
+							<ul>
+								<li> This should result in a JSON file being downloaded to your machine
+								<li> Transfer this file to your server, and store it in a secure place on your server
+								<li> Copy the path of this JSON file, and store the path in an environment variable called GOOGLE_APPLICATION_CREDENTIALS
+							</ul>
+						</li>
+						<li>Copy contents of application zip file to directory /var/www/html/cs499SupremeCourt/</li>
+						<li>Using SCDB.sql file contained in application files, import this into MySQL</li>
+						<li>Python Packages: The following need to be installed using the following command: pip3 install PACKAGE_NAME
+								<ul>newspaper3k</ul>
+								<ul>beautifulsoup4</ul>
+								<ul>google-cloud</ul>
+								<ul>pillow</ul>
+								<ul>newsapi-python</ul>
+								<ul>nltk</ul>
+						</li>
+						<li>For the application to perform language analysis, in python, one must import and download a specific library with the following statements:
+								<ul><li>import nltk</li>
+										<li>nltk.download("punkt")</li>
+								</ul>
+						</li>
+						<li>Automating script
+							<ol>
+								<li>Script is automated using crontab, which allows for the regular execution of shell commands.</li>
+								<li>The shell command we need to execute regularly is "python3 /var/www/html/cs499SupremeCourt/source/article_collector/article_collector.py"</li>
+								<li>To edit tasks completed regularly, we need to run command "crontab -e".This opens an editor that we can use to add a job.</li>
+								<li>In editor, add line: "* * 0 0 0 python3 /var/www/html/cs499SupremeCourt/source/article_collector/article_collector.py" and save. This runs the collector daily at midnight.</li>
+								<li>More information on how to edit the frequency of jobs can be found here: <a href="https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/">Crontab FAQ</a></li>
+							</ol>
+						</li>
+						<li>With the script automated, libraries installed, and files in the right place on the server, one should be able to access the site from http://yourDomainOrIP/cs499SupremeCourt/webapp/</li>
+					</ol>
+					<h2>AWS Installation</h2>
+					<ol><li>To install for our customers, we have decided to take advantage of AWS's Amazon Machine Image (AMI) feature that allows one to take a snapshot of a server and all of its files.</li>
+							<li>We have a private AMI saved of our application, and will be able to transfer this to the customers whenever we get their personal AWS accounts set up</li>
+							<li>For non technical clients, this requires a lot fewer steps than a whole LAMP installation.</li>
+					</ol>
 
+
+
+				</div>
 	</body>
 
 </html>
