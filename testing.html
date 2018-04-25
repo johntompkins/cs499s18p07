@@ -133,32 +133,36 @@
 							<ul>
 								<li>Test that article collector can read and write to back-end SQL database</li>
 								<li>Test that web display can connect to SQL database</li>
-								<li>
+								<li>Test that articles are retreieved correctly from backend SQL</li>
+								<li>Test that an appropriate message displays if database is unavailable</li>
 							</ul>
 						</li>
-						<li>Inside of the PHP script, test the connection to the database; check that all sources are correctly listed and able to be connected to visually via the application; test that all text and all images are extracted from the article; make sure all contents are displayed correctly. Also check that the text analysis attributes are correctly displayed.</li>
-						<li>Test that an appropriate message displays if database is unavailable.</li>
-						<li>Boundary/extreme testing
+						<li><b>Function Testing</b>
+							<ul>
+								<li>Test that the URLs returned by NEWS API are properly returned to the parsing function.
+								<li>Test that the RSS feeds can be properly processed by the series of functions.
+							</ul>
+						</li>
+						<li><b>Boundary/extreme testing</b>
 							<ul>
 								<li>Test the limits of all the search functions. The boundaries for the dates selected; maximum/minimum keyword length; maximum/minimum keywords</li>
-								<li>Make sure all components of the web application are able to be reached by the customer quickly and effortlessly; list all sources and ensure they are visible, readable, and accessible. Test articles that have abnormally large amounts of test and/or images, ensuring everything is prominently presented to the customer on-screen.</li>
+								<li>Test articles that have abnormally large amounts of test and/or images, ensuring everything is prominently presented to the customer on-screen.</li>
 							</ul>
 						</li>
 				    </ul>
 					<h3>3. System Testing</h3>
 					<ul>
-						<li>Compatibility Testing
+						<li><b>Compatibility Testing</b>
 							<ul>
-								<li>Front end web app - Browser - Chrome</li>
-								<li>Web server - AWS ec2 Container with LAMP STACK. Need to ensure all components of application function when it is moved to a university AWS account as they did on the development instance that we are using now.</li>
-								<li>Article Collector - AWS ec2 Container. Need to ensure that the collector functions correctly on Python 3.6 on the instance. </li>
+								<li>Test that front end shows properly on all major browsers (Microsoft Edge, Chrome, Firefox, Safari, ...)</li>
+								<li>Test that article collector runs properly; all libraries are installed, and can be run periodically (once a day, for example)</li>
+								<li>Test that Amazon ec2 server is reachable from public internet</li>
 							</ul>
 						</li>
-						<li>Ensure that the article collector is runnning on a regular basis. Collector should run at a predetermined interval.</li>
 				    </ul>
 					<h3>4. Customer/User Testing</h3>
 					<ul>
-						<li>Test run from customers
+						<li><b>Test run from customers</b>
 							<ul>
 								<li>Have the customers go through a test run so that they get an idea of how the program functions. They will be able to focus on specific test scenarios they find crucial for the funcionality of the program.</li>
 							</ul>
