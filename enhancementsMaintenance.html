@@ -49,7 +49,46 @@
 					<a href="references.html"> References></a>
 					<br><br>
 				</div>
-
+				<div class="text">
+					<h3>Future Enhancements</h3>
+					<ul>
+						<li>An administrative page from which users can control the timeout and see source statistics
+						<li>A classifying agent using machine learning techniques to judge relevancy of articles
+						<li>Improved statistics about sources, giving a detailed overview into how many articles are collected from each source.
+						<li>Using the better statistics, a heuristic to identify bad sources and ignore them in the future
+						<li>Administrative tools allowing a source to be black-listed from the front-end, and to view black-listed sources and reenable them
+						<li>Smoother UI and more text analysis information
+					</ul>
+					<h3>Maintenance</h3>
+					<p>The website is designed to be very low-maintenance. Once set up, it should continue running until stopped, but there are a few potential things that can go wrong.</p>
+					<ul>
+						<li>The Google Alerts account expires, or the Google Alert feeds are no longer reachable
+						<ol>
+							<li>To identify if this is the problem, copy and paste the RSS-feeds in the main function of the article collector into your browser. It should show RSS feed data in a JSON format. If it does not, new Google Alerts need to be set up.
+							<li>An account and making the alerts is completely free. Create a Google Alerts account and create as many feeds as you'd like, searching for items like "US Supreme Court", "USA Supreme Court", "SCOTUS", "American Supreme Court", etc.
+							<li>Finally, Just copy and paste the new RSS feed links into the feeds array of the main function of the article collector, overwriting the previous ones.
+						</ol>
+						<br>
+						<li>The News API Key expires or no longer works
+						<ol>
+							<li>There will likely be an error telling you so in the output of the article collector if this is your problem
+							<li>Go to newsapi.org and register an account to get a key
+							<li>Put the new key into the project. It should begin working again
+						</ol>
+						<br>
+						<li>The Google Vision API key expires or no longer works
+						<ol>
+							<li>As with the News-API, this will likely give you a specific error
+							<li>Go to cloud.google.com/vision/docs and run through the quickstart tutorial to fix the problem
+						</ol>
+						<li>Other problems
+						<ul>
+							<li>Other problems include the article collector throwing unrelated errors or not running periodically, or the front end website having display issues. There aren't catch-all ways to fix these problems, and you may need to have someone else look at it. Luckily, these should be extremely rare, as we have thoroughly tested the project.
+						</ul>
+					</ul>
+				</div>
+			</div>
 	</body>
+	
 
 </html>
