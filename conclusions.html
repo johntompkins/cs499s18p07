@@ -49,6 +49,37 @@
 					<a href="references.html"> References></a>
 					<br><br>
 				</div>
+				<div class="text">
+					<h2>Conclusion</h2>
+					<p>
+						The goal of this project was to create a web application which would allow users to sort and analyze articles pertaining to the Supreme Court of the United States. There are a variety of sources the user can filter through as well. The application also presents analytics gained from the downloaded articles, including sentiment score, magnitude, key words, images, and entities of images. The functionality of the application is tremendously convenient; it's faster than a simple google search of articles. It's comparable to a mass amount of searches done simultaneously; however, it's still better, because the articles' data is downloaded and analyzed. It has the potential to save hundreds of hours of the user's time.
+					</p>
+					<p>
+						Most ideas from previous' groups work on this project were adopted. These include the scraping process. The functionality was improved by adding more sources to draw from when collecting articles. Another improvement was the UI design, wherein more convenient features were added. Here is a simplified list of the process gone through to produce the application:
+						<ul>
+							<li>Database created, which holds article data: links, text, images, sentient, magnitude, keywords, and entities.</li>
+							<li>Site scrapers set up. Change settings for scrapers to run on a preset time interval (i.e. daily).</li>
+							<li>Host source code and article collection files in an Amazon Web Service Apache HTTP server. Anyone with the link can now access the application and use it.</li>
+						</ul>
+					</p>
+					<p>
+						The tools and platforms that we used in the production are as follows:
+						<table style="width: 100%">
+							<tr>
+								<td>Python 3.6</td><td>AWS EC2 Instance t2.micro</td>
+								<td>MySQL</td>
+							</tr>
+							<tr>
+								<td>PHP 7.2.2</td><td>Newspaper3k 0.2.6</td>
+								<td>Google Cloud Vision API</td>
+							</tr>
+							<tr>
+								<td>Google Cloud Language API</td><td>Javascript 1.8.2</td>
+								<td>NEWSAPI 0.1.1</td>
+							</tr>
+						</table>
+					</p>
+				</div>
 
 	</body>
 
