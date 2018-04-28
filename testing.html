@@ -56,57 +56,57 @@
 							<ul>
 								<li>Website-specific scraper functions
 									<ul>
-										<li>Test that each scraper function can connect to its given website </li>
-										<li>Test that each scraper function successfully parses its given website </li>
+										<li>✔ Test that each scraper function can connect to its given website </li>
+										<li>✔ Test that each scraper function successfully parses its given website </li>
 									</ul>
 								</li>
 								<li>NEWS API function
 									<ul>
-										<li>Test that NEWS API key is correct and allows authentication </li>
-										<li>Test that NEWS API successfully pulls articles with keyword "United States Supreme Court"</li>
+										<li>✔ Test that NEWS API key is correct and allows authentication </li>
+										<li>✔ Test that NEWS API successfully pulls articles with keyword "United States Supreme Court"</li>
 									</ul>
 								</li>
 								<li>RSS feeds
 									<ul>
-										<li>Test that Google Alerts account associated with feed is still active</li>
-										<li>Test that RSS feeds are on relevant search queries ('SCOTUS', 'Supreme Court', etc.)</li>
-										<li>Test that article collector can successfully connect to the feeds</li>
+										<li>✔ Test that Google Alerts account associated with feed is still active</li>
+										<li>✔ Test that RSS feeds are on relevant search queries ('SCOTUS', 'Supreme Court', etc.)</li>
+										<li>✔ Test that article collector can successfully connect to the feeds</li>
 									</ul>
 								</li>
 								<li>Article Parsing
 									<ul>
-										<li>Test that article is successfully downloaded from URL</li>
-										<li>Test that article's text is successfully parsed
+										<li>✔ Test that article is successfully downloaded from URL</li>
+										<li>✔ Test that article's text is successfully parsed
 											<ul>
-												<li>Test that authors are retrieved correctly</li>
-												<li>Test that article body is retrieved correctly</li>
-												<li>Test that publish date is retreived correctly, if available</li>
-												<li>Test that article title is retreived correctly</li>
+												<li>✔ Test that authors are retrieved correctly</li>
+												<li>✔ Test that article body is retrieved correctly</li>
+												<li>✖ Test that publish date is retreived correctly, if available</li>
+												<li>✔ Test that article title is retreived correctly</li>
 											</ul>
 										</li>
 									</ul>
 								</li>
 								<li>Relevancy analysis
 									<ul>
-										<li>Test that articles pertaining to state or foreign supreme courts are excluded</li>
-										<li>Test that avoided sources are successfully avoided</li>
+										<li>✔ Test that articles pertaining to state or foreign supreme courts are excluded</li>
+										<li>✔ Test that avoided sources are successfully avoided</li>
 									</ul>
 								</li>
 								<li>Redundancy Check
 									<ul>
-										<li>Test that duplicate articles are excluded from the database</li>
+										<li>✔ Test that duplicate articles are excluded from the database</li>
 									</ul>
 								</li>
 								<li>Text analysis
 									<ul>
-										<li>Test that article collector successfully connects to Google Natural Language Service</li>
-										<li>Test that Google Natural Language Service correctly returns keywords from given articles</li>
+										<li>✔ Test that article collector successfully connects to Google Natural Language Service</li>
+										<li>✔ Test that Google Natural Language Service correctly returns keywords from given articles</li>
 									</ul>
 								</li>
 								<li>Image analysis
 									<ul>
-										<li>Test that article collector successfully connects to Google Vision Image analysis</li>
-										<li>Test that Google Vision Image analysis correctly returns keywords pertaining to given images</li>
+										<li>✔ Test that article collector successfully connects to Google Vision Image analysis</li>
+										<li>✔ Test that Google Vision Image analysis correctly returns keywords pertaining to given images</li>
 									</ul>
 								</li>
 							</ul>
@@ -115,15 +115,15 @@
 							<ul>
 								<li>Form submission functionality
 									<ul>
-										<li>Test that the keywords user submits are correctly handled and sent to the php script to retrieve information from the database.</li>
-										<li>Test that the date submissions are valid and in the correct format when sent to the script.</li>
+										<li>✔ Test that the keywords user submits are correctly handled and sent to the php script to retrieve information from the database.</li>
+										<li>✔ Test that the date submissions are valid and in the correct format when sent to the script.</li>
 									</ul>
 								</li>
 								<li>Display functionality
 									<ul>
-										<li>Check that all sources are correctly listed and selectable</li>
-										<li>Check that articles' contents are displayed correctly</li>
-										<li>Check text analysis keywords are displayed correctly</li>
+										<li>✔ Check that all sources are correctly listed and selectable</li>
+										<li>✔ Check that articles' contents are displayed correctly</li>
+										<li>✔ Check text analysis keywords are displayed correctly</li>
 									</ul>
 								</li>
 							</ul>
@@ -133,22 +133,22 @@
 					<ul>
 						<li><b>Synchronization Testing</b>
 							<ul>
-								<li>Test that article collector can read and write to back-end SQL database</li>
-								<li>Test that web display can connect to SQL database</li>
-								<li>Test that articles are retreieved correctly from backend SQL</li>
-								<li>Test that an appropriate message displays if database is unavailable</li>
+								<li>✔ Test that article collector can read and write to back-end SQL database</li>
+								<li>✔ Test that web display can connect to SQL database</li>
+								<li>✔ Test that articles are retreieved correctly from backend SQL</li>
+								<li>✖ Test that an appropriate message displays if database is unavailable</li>
 							</ul>
 						</li>
 						<li><b>Function Testing</b>
 							<ul>
-								<li>Test that the URLs returned by NEWS API are properly returned to the parsing function.
-								<li>Test that the RSS feeds can be properly processed by the series of functions.
+								<li>✔ Test that the URLs returned by NEWS API are properly returned to the parsing function.
+								<li>✔ Test that the RSS feeds can be properly processed by the series of functions.
 							</ul>
 						</li>
 						<li><b>Boundary/extreme testing</b>
 							<ul>
-								<li>Test the limits of all the search functions. The boundaries for the dates selected; maximum/minimum keyword length; maximum/minimum keywords</li>
-								<li>Test articles that have abnormally large amounts of test and/or images, ensuring everything is prominently presented to the customer on-screen.</li>
+								<li>✔ Test the limits of all the search functions. The boundaries for the dates selected; maximum/minimum keyword length; maximum/minimum keywords</li>
+								<li><b>~</b> Test articles that have abnormally large amounts of text and/or images, ensuring everything is prominently presented to the customer on-screen.</li>
 							</ul>
 						</li>
 				    </ul>
@@ -156,9 +156,9 @@
 					<ul>
 						<li><b>Compatibility Testing</b>
 							<ul>
-								<li>Test that front end shows properly on all major browsers (Microsoft Edge, Chrome, Firefox, Safari, ...)</li>
-								<li>Test that article collector runs properly; all libraries are installed, and can be run periodically (once a day, for example)</li>
-								<li>Test that Amazon ec2 server is reachable from public internet</li>
+								<li>✔ Test that front end shows properly on all major browsers (Microsoft Edge, Chrome, Firefox, Safari, ...)</li>
+								<li>✔ Test that article collector runs properly; all libraries are installed, and can be run periodically (once a day, for example)</li>
+								<li>✔ Test that Amazon ec2 server is reachable from public internet</li>
 							</ul>
 						</li>
 				    </ul>
@@ -166,7 +166,7 @@
 					<ul>
 						<li><b>Test run from customers</b>
 							<ul>
-								<li>Have the customers go through a test run so that they get an idea of how the program functions. They will be able to focus on specific test scenarios they find crucial for the funcionality of the program.</li>
+								<li><b>~</b> Have the customers go through a test run so that they get an idea of how the program functions. They will be able to focus on specific test scenarios they find crucial for the funcionality of the program.</li>
 							</ul>
 						</li>
 					</ul>
